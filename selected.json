@@ -1,0 +1,11 @@
+{
+ "family": "random forest",
+ "model": "random forest (min_leaf=3)",
+ "val_pr_auc": 0.9575255025685875,
+ "threshold": 0.38337133878934804,
+ "top_pr_auc": 0.9622927774810852,
+ "close": [
+  "random forest (min_leaf=3)",
+  "xgboost (depth=5, lr=0.05)"
+ ]
+}

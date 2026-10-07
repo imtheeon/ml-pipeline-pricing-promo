@@ -1,0 +1,61 @@
+{
+ "selected": "random forest (min_leaf=3)",
+ "threshold_from_validation": 0.38337133878934804,
+ "results": {
+  "dummy": {
+   "pr_auc": 0.18118118118118118,
+   "recall_at_p90": 0.0,
+   "threshold_p90": null,
+   "precision_at_threshold": 0.0,
+   "recall_at_threshold": 0.0,
+   "flagged": 0,
+   "caught": 0,
+   "missed": 362,
+   "false_alarms": 0
+  },
+  "rule": {
+   "pr_auc": 0.7346331775889787,
+   "recall_at_p90": 0.6988950276243094,
+   "threshold_p90": 1.0,
+   "precision_at_threshold": 0.9730769230769231,
+   "recall_at_threshold": 0.6988950276243094,
+   "flagged": 260,
+   "caught": 253,
+   "missed": 109,
+   "false_alarms": 7
+  },
+  "logistic": {
+   "pr_auc": 0.940980711845059,
+   "recall_at_p90": 0.7679558011049724,
+   "threshold_p90": 0.48804832815544297,
+   "precision_at_threshold": 0.9130434782608695,
+   "recall_at_threshold": 0.7541436464088398,
+   "flagged": 299,
+   "caught": 273,
+   "missed": 89,
+   "false_alarms": 26
+  },
+  "random forest": {
+   "pr_auc": 0.9527872614657287,
+   "recall_at_p90": 0.8149171270718232,
+   "threshold_p90": 0.4293090223328305,
+   "precision_at_threshold": 0.8771929824561403,
+   "recall_at_threshold": 0.8287292817679558,
+   "flagged": 342,
+   "caught": 300,
+   "missed": 62,
+   "false_alarms": 42
+  },
+  "xgboost": {
+   "pr_auc": 0.954736278699813,
+   "recall_at_p90": 0.8342541436464088,
+   "threshold_p90": 0.4391321837902069,
+   "precision_at_threshold": 0.9377049180327869,
+   "recall_at_threshold": 0.7900552486187845,
+   "flagged": 305,
+   "caught": 286,
+   "missed": 76,
+   "false_alarms": 19
+  }
+ }
+}

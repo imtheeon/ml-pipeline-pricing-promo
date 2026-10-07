@@ -1,0 +1,362 @@
+{
+  "schema_version": "1",
+  "created": "2026-10-07",
+  "shape": {
+    "n_rows": 9994,
+    "n_cols": 25,
+    "memory_mb": 4.06,
+    "sampled": false,
+    "sample_rows": null
+  },
+  "target": {
+    "name": "is_loss",
+    "task": "binary",
+    "n_classes": 2,
+    "class_balance": {
+      "0": 0.8128,
+      "1": 0.1872
+    },
+    "minority_frac": 0.1872
+  },
+  "columns": {
+    "order_id": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 5009,
+      "unique_frac": 0.5012,
+      "n_levels": 5009,
+      "top": {
+        "CA-2017-100111": 0.0014,
+        "CA-2017-157987": 0.0012,
+        "US-2016-108504": 0.0011,
+        "CA-2016-165330": 0.0011,
+        "CA-2015-131338": 0.001
+      }
+    },
+    "order_date": {
+      "kind": "datetime",
+      "missing_frac": 0.0,
+      "n_unique": 1237,
+      "unique_frac": 0.1238,
+      "start": "2014-01-03",
+      "end": "2017-12-30"
+    },
+    "order_month": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 48,
+      "unique_frac": 0.0048,
+      "n_levels": 48,
+      "top": {
+        "2017-12-01": 0.0462,
+        "2017-09-01": 0.0459,
+        "2017-11-01": 0.0459,
+        "2016-11-01": 0.037,
+        "2016-09-01": 0.0363
+      }
+    },
+    "ship_date": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 1334,
+      "unique_frac": 0.1335,
+      "n_levels": 1334,
+      "top": {
+        "2015-12-16": 0.0035,
+        "2017-09-26": 0.0034,
+        "2017-11-21": 0.0032,
+        "2017-12-06": 0.0032,
+        "2017-09-15": 0.003
+      }
+    },
+    "ship_mode": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 4,
+      "unique_frac": 0.0004,
+      "n_levels": 4,
+      "top": {
+        "Standard Class": 0.5972,
+        "Second Class": 0.1946,
+        "First Class": 0.1539,
+        "Same Day": 0.0543
+      }
+    },
+    "customer_id": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 793,
+      "unique_frac": 0.0793,
+      "n_levels": 793,
+      "top": {
+        "WB-21850": 0.0037,
+        "MA-17560": 0.0034,
+        "JL-15835": 0.0034,
+        "PP-18955": 0.0034,
+        "JD-15895": 0.0032
+      }
+    },
+    "segment": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 3,
+      "unique_frac": 0.0003,
+      "n_levels": 3,
+      "top": {
+        "Consumer": 0.5194,
+        "Corporate": 0.3022,
+        "Home Office": 0.1784
+      }
+    },
+    "city": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 531,
+      "unique_frac": 0.0531,
+      "n_levels": 531,
+      "top": {
+        "New York City": 0.0916,
+        "Los Angeles": 0.0747,
+        "Philadelphia": 0.0537,
+        "San Francisco": 0.051,
+        "Seattle": 0.0428
+      }
+    },
+    "state": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 49,
+      "unique_frac": 0.0049,
+      "n_levels": 49,
+      "top": {
+        "California": 0.2002,
+        "New York": 0.1129,
+        "Texas": 0.0986,
+        "Pennsylvania": 0.0587,
+        "Washington": 0.0506
+      }
+    },
+    "region": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 4,
+      "unique_frac": 0.0004,
+      "n_levels": 4,
+      "top": {
+        "West": 0.3205,
+        "East": 0.285,
+        "Central": 0.2324,
+        "South": 0.1621
+      }
+    },
+    "product_id": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 1862,
+      "unique_frac": 0.1863,
+      "n_levels": 1862,
+      "top": {
+        "OFF-PA-10001970": 0.0019,
+        "TEC-AC-10003832": 0.0018,
+        "FUR-FU-10004270": 0.0016,
+        "FUR-CH-10001146": 0.0015,
+        "TEC-AC-10003628": 0.0015
+      }
+    },
+    "category": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 3,
+      "unique_frac": 0.0003,
+      "n_levels": 3,
+      "top": {
+        "Office Supplies": 0.603,
+        "Furniture": 0.2122,
+        "Technology": 0.1848
+      }
+    },
+    "sub_category": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 17,
+      "unique_frac": 0.0017,
+      "n_levels": 17,
+      "top": {
+        "Binders": 0.1524,
+        "Paper": 0.1371,
+        "Furnishings": 0.0958,
+        "Phones": 0.089,
+        "Storage": 0.0847
+      }
+    },
+    "product_name": {
+      "kind": "text",
+      "missing_frac": 0.0,
+      "n_unique": 1850,
+      "unique_frac": 0.1851,
+      "median_length": 36
+    },
+    "sales": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 5825,
+      "unique_frac": 0.5828,
+      "min": 0.444,
+      "median": 54.49,
+      "max": 22638.48,
+      "skew": 12.9728,
+      "outlier_frac": 0.1168
+    },
+    "quantity": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 14,
+      "unique_frac": 0.0014,
+      "min": 1.0,
+      "median": 3.0,
+      "max": 14.0,
+      "skew": 1.2785,
+      "outlier_frac": 0.017
+    },
+    "discount": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 12,
+      "unique_frac": 0.0012,
+      "min": 0.0,
+      "median": 0.2,
+      "max": 0.8,
+      "skew": 1.6843,
+      "outlier_frac": 0.0857
+    },
+    "profit": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 7287,
+      "unique_frac": 0.7291,
+      "min": -6599.978,
+      "median": 8.6665,
+      "max": 8399.976,
+      "skew": 7.5614,
+      "outlier_frac": 0.1882
+    },
+    "gross_sales": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 4290,
+      "unique_frac": 0.4293,
+      "min": 0.99,
+      "median": 64.96,
+      "max": 45276.96,
+      "skew": 20.0963,
+      "outlier_frac": 0.1202
+    },
+    "discount_usd": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 2913,
+      "unique_frac": 0.2915,
+      "min": 0.0,
+      "median": 1.34,
+      "max": 22638.48,
+      "skew": 33.5152,
+      "outlier_frac": 0.1594
+    },
+    "cost": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 5064,
+      "unique_frac": 0.5067,
+      "min": 0.55,
+      "median": 41.66,
+      "max": 24449.56,
+      "skew": 14.7531,
+      "outlier_frac": 0.1229
+    },
+    "margin_pct": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 288,
+      "unique_frac": 0.0288,
+      "min": -275.0,
+      "median": 27.0,
+      "max": 50.0,
+      "skew": -2.8948,
+      "outlier_frac": 0.0953
+    },
+    "unit_net_price": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 2665,
+      "unique_frac": 0.2667,
+      "min": 0.336,
+      "median": 16.27,
+      "max": 3773.08,
+      "skew": 10.7826,
+      "outlier_frac": 0.1055
+    },
+    "discount_band": {
+      "kind": "categorical",
+      "missing_frac": 0.0,
+      "n_unique": 4,
+      "unique_frac": 0.0004,
+      "n_levels": 4,
+      "top": {
+        "0%": 0.4801,
+        "1-20%": 0.3805,
+        ">40%": 0.0934,
+        "21-40%": 0.046
+      }
+    },
+    "is_loss": {
+      "kind": "numeric",
+      "missing_frac": 0.0,
+      "n_unique": 2,
+      "unique_frac": 0.0002,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0,
+      "skew": 1.6039,
+      "outlier_frac": 0.0
+    }
+  },
+  "duplicates": {
+    "exact_row_frac": 0.0001
+  },
+  "constant_columns": [],
+  "high_cardinality_categoricals": [
+    "order_id",
+    "ship_date",
+    "customer_id",
+    "city",
+    "product_id"
+  ],
+  "datetime_columns": [
+    "order_date"
+  ],
+  "time_col": "order_date",
+  "group_col": null,
+  "entity_candidates": [
+    "order_id",
+    "customer_id",
+    "product_id"
+  ],
+  "leakage_suspects": [],
+  "traits": {
+    "n_rows": 9994,
+    "n_features": 24,
+    "task": "binary",
+    "minority_frac": 0.1872,
+    "has_datetime": true,
+    "has_groups": false,
+    "small_data": false,
+    "imbalanced": false,
+    "high_card_categoricals": [
+      "order_id",
+      "ship_date",
+      "customer_id",
+      "city",
+      "product_id"
+    ]
+  }
+}
