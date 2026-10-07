@@ -12,8 +12,10 @@ Discounts above 20% almost always lose money, and a one-line rule already catche
 | Never flag (dummy) | 0% | $0 | 0.181 |
 | Rule: discount > 20% | 70% (253 of 362) | $32.7K of $36.6K (89%) | 0.735 |
 | **Random forest (selected)** | **83% (300 of 362)** | **$35.3K of $36.6K (96.5%)** | **0.953** |
-| XGBoost | 79% | not computed | 0.955 |
-| Logistic regression | 75% | not computed | 0.941 |
+| XGBoost | 79%* | not computed | 0.955 |
+| Logistic regression | 75%* | not computed | 0.941 |
+
+*XGBoost and logistic are shown at the default 0.5 cut-off, not the tuned one, so compare their PR-AUC, not that column.
 
 - **Business view:** the model flags about $2.6K more of the loss dollars than the rule in six months, on a small store. Flagging only points a reviewer at a line; it does not save the money by itself.
 - **Cost of flags:** 42 false alarms, carrying $1.0K of profit that a reviewer would question for nothing (the rule: 7 false alarms, $0.3K).
