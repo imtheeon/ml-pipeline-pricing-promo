@@ -1,0 +1,17 @@
+{
+ "exam_period": [
+  "2017-07-18",
+  "2017-12-30"
+ ],
+ "total_loss_dollars": 36622.6106,
+ "model": {
+  "loss_dollars_flagged": 35343.567299999995,
+  "share_of_loss_flagged": 0.965075037550709,
+  "profit_dollars_on_false_alarms": 1038.1743
+ },
+ "rule": {
+  "loss_dollars_flagged": 32714.1792,
+  "share_of_loss_flagged": 0.8932781870006831,
+  "profit_dollars_on_false_alarms": 329.5674
+ }
+}

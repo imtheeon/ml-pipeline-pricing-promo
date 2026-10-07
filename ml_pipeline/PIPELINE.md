@@ -76,3 +76,4 @@ Started 2026-10-07. Data: `data/clean/lines.parquet` from this repo (Superstore,
 - Retrain on the newest data every 6 months, keeping the same chronological split and rules; re-pick the threshold on the newest validation slice (the exam showed 87.7% precision against a 90% target)
 - Watch for new states, sub-categories or a discount policy change; the model has not seen them
 - Limits: one store's data from 2014-2017; flags help review discounts, they do not set prices
+- Figure 17_business_impact.png: Dollars lost on money-losing lines in the final exam period, and how much of that sits on lines each method flags. Flagging is not saving: it only points reviewers to the lines worth questioning.
