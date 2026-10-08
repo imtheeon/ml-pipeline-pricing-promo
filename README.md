@@ -1,5 +1,7 @@
 # Which order lines lose money? An ML pipeline example
 
+[![tests](https://github.com/imtheeon/ml-pipeline-pricing-promo/actions/workflows/tests.yml/badge.svg)](https://github.com/imtheeon/ml-pipeline-pricing-promo/actions/workflows/tests.yml)
+
 A 16-step, gated machine-learning pipeline on retail order data (scikit-learn + XGBoost 3.4.1). CPU only, runs in about 30 seconds, $0.
 
 ## The question
@@ -27,12 +29,15 @@ Discounts above 20% almost always lose money, and a one-line rule already catche
 - **Three models are tied:** logistic, random forest and XGBoost are within 0.014 PR-AUC. The gain over the rule is real; the ranking among the three is not. The random forest won because of a selection rule fixed before training (a simpler model within 0.005 PR-AUC wins).
 - **One dataset:** a single store's orders, 2014-2017 (Superstore-style data). Not proof that it generalizes.
 
-## What makes the process trustworthy
-- **Chronological split:** train on the past, tune on the next period, exam on the newest. A random split would let the model see the future.
-- **Leakage excluded:** `profit`, `cost` and `margin_pct` are built from the answer, so they are not features.
-- **Real baseline:** the models must beat the discount rule, not only a dummy.
-- **Locked exam:** the final test set is fingerprinted and scored once; every rule was written down before modeling.
-- **Everything logged:** see `ml_pipeline/PIPELINE.md` for every step, gate, decision and figure explanation, plus a monitoring plan.
+## Why you can trust the numbers
+- The split is chronological: train on the past, tune on the next period, test on the newest. A random split would let the model see the future.
+- `profit`, `cost` and `margin_pct` are built from the answer, so they are not features.
+- The models have to beat the discount rule, not only a dummy.
+- The final test set is fingerprinted and scored once. Every rule was written down before modeling.
+- `pytest` checks the metrics, the leakage list and that the README numbers match the saved result files.
+
+## How this was built
+I'm moving into data work from life and health insurance sales. I built this with Claude Code and approved each gate myself (data, split and metric, model choice, final exam) before it moved on. Every step, decision and chart explanation is logged in `ml_pipeline/PIPELINE.md`, and `INTERVIEW_GUIDE.md` explains the project in plain words.
 
 ## Run it
 ```bash
@@ -46,3 +51,7 @@ Data: `data/clean/lines.parquet` (9,994 order lines, from my `pricing-promo-anal
 - `ml_pipeline/preprocess.py`, `models.py`, `metrics.py` - shared code
 - `ml_pipeline/guard.py` - checks that block leakage and a second look at the exam set
 - `ml_pipeline/figures/` - every chart
+
+## More from me
+- [ml-pipeline-fremtpl2-claims](https://github.com/imtheeon/ml-pipeline-fremtpl2-claims): the same pipeline on 678K real French car-insurance policies
+- [pricing-promo-analysis](https://github.com/imtheeon/pricing-promo-analysis): the analysis and Streamlit dashboard this data comes from
