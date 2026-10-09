@@ -1,6 +1,11 @@
-# Which order lines lose money? An ML pipeline example
+# Which order lines lose money? A 16-step ML pipeline
 
 [![tests](https://github.com/imtheeon/ml-pipeline-pricing-promo/actions/workflows/tests.yml/badge.svg)](https://github.com/imtheeon/ml-pipeline-pricing-promo/actions/workflows/tests.yml)
+
+## In plain English
+- **What it does:** trains a model to flag which discounted retail order lines will lose money, and checks it against a simple rule ("discount over 20%").
+- **Result:** on the newest six months of orders, which the model never saw during training, it caught **300 of 362** loss-making lines (83%), against 253 (70%) for the rule. It flagged $35.3K of the $36.6K lost, against $32.7K for the rule.
+- **Read this first:** this is the same Superstore sample data as `pricing-promo-analysis`, from one small store, and the gain over the rule is about $2.6K in six months. The point is the method: a leakage-safe pipeline that has to beat a simple rule, not just a dummy.
 
 A 16-step, gated machine-learning pipeline on retail order data (scikit-learn + XGBoost 3.4.1). CPU only, runs in about 30 seconds, $0.
 
@@ -51,6 +56,9 @@ Data: `data/clean/lines.parquet` (9,994 order lines, from my `pricing-promo-anal
 - `ml_pipeline/preprocess.py`, `models.py`, `metrics.py` - shared code
 - `ml_pipeline/guard.py` - checks that block leakage and a second look at the exam set
 - `ml_pipeline/figures/` - every chart
+
+## License
+Code: MIT (see `LICENSE`). Data: the Superstore sample dataset as published on Kaggle by user vivek468, the same data used in `pricing-promo-analysis`.
 
 ## More from me
 - [ml-pipeline-fremtpl2-claims](https://github.com/imtheeon/ml-pipeline-fremtpl2-claims): the same pipeline on 678K real French car-insurance policies
